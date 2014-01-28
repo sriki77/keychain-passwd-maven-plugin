@@ -1,0 +1,34 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.apache.maven.plugin.my.unit</groupId>
+    <artifactId>project-to-test</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+    <name>Test OSXKeyChainMojo</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sriki</groupId>
+                <artifactId>keychain-passwd-maven-plugin</artifactId>
+                <version>1.0</version>
+                <configuration>
+                    <accountName>maven-test-item</accountName>
+                    <itemName>maven-test-item</itemName>
+                    <passwordProperty>password</passwordProperty>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

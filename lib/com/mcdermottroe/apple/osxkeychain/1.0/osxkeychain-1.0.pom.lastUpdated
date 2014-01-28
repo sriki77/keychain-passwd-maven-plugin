@@ -1,0 +1,8 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Sun Jan 26 21:31:04 GMT+05:30 2014
+97480b3a120a99f05b3235cf739e5786ca9c91c8@default-http\://repo.apigee.com\:8081/artifactory/repo/.lastUpdated=1390752062845
+file\:///Users/Srikanth/wip/dev-support/osx-keychain-passwd-plugin/lib/.lastUpdated=1390752064314
+http\://repo1.maven.org/maven2/.error=
+file\:///Users/Srikanth/wip/dev-support/osx-keychain-passwd-plugin/lib/.error=
+http\://repo1.maven.org/maven2/.lastUpdated=1390752064309
+http\://repo.apigee.com\:8081/artifactory/repo/.error=Could not transfer artifact com.mcdermottroe.apple\:osxkeychain\:pom\:1.0 from/to apigee-cs-libs-release (http\://repo.apigee.com\:8081/artifactory/repo)\: Error transferring file\: repo.apigee.com
