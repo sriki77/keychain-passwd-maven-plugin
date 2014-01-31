@@ -18,7 +18,7 @@
     </licenses>
     <scm>
         <url>https://github.com/sriki77/keychain-passwd-maven-plugin</url>
-        <connection>scm:git:https://github.com/sriki77/keychain-passwd-maven-plugin</connection>
+        <connection>scm:git:https://github.com/sriki77/keychain-passwd-maven-plugin.git</connection>
         <tag>master</tag>
     </scm>
     <developers>
@@ -85,7 +85,6 @@
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-core</artifactId>
             <version>3.1.1</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.codehaus.plexus</groupId>

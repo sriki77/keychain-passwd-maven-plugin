@@ -6,9 +6,10 @@ import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
+import org.apache.maven.project.MavenProject;
 
 
-@Mojo(name = "getpasswd", defaultPhase = LifecyclePhase.INITIALIZE)
+@Mojo(name = "getpasswd", defaultPhase = LifecyclePhase.VALIDATE)
 public class OSXKeyChainMojo
         extends AbstractMojo {
 
@@ -21,19 +22,23 @@ public class OSXKeyChainMojo
     @Parameter(required = true)
     private String passwordProperty;
 
+    @Parameter(defaultValue = "${project}")
+    MavenProject project;
+
     public void execute()
             throws MojoExecutionException {
         getLog().info(String.format("Accessing ItemName: %s, AccountName: %s", itemName, accountName));
         setPasswordValue();
     }
 
-    private void setPasswordValue() throws MojoExecutionException {
+    private void setPasswordValue() {
         try {
             final String password = new PasswordReader().getPassword(itemName, accountName);
             getLog().debug(String.format("Got Password: %s for ItemName: %s, AccountName: %s", password, itemName, accountName));
             System.setProperty(passwordProperty, password);
+            project.getProperties().setProperty(passwordProperty, password);
         } catch (Exception e) {
-            throw new MojoExecutionException("Failed to retrieve data from key chain", e);
+            getLog().error("Failed to retrieve data from key chain", e);
         }
     }
 
