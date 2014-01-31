@@ -8,20 +8,37 @@ import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 
-
+/**
+ * Retrieves the password from the OSX keychain.
+ * The password item in keychain is identified by item and account name.
+ * The retrieved value is set as a project property.
+ */
 @Mojo(name = "getpasswd", defaultPhase = LifecyclePhase.VALIDATE)
 public class OSXKeyChainMojo
         extends AbstractMojo {
 
+    /**
+     * Item name of the password keychain item.
+     */
     @Parameter(required = true)
     private String itemName;
 
+    /**
+     * Account name of the password keychain item.
+     */
     @Parameter(required = true)
     private String accountName;
 
+    /**
+     * Property name whose value should be the password
+     * retrieved from the keychain item.
+     */
     @Parameter(required = true)
     private String passwordProperty;
 
+    /**
+     * The project into which the property is set.
+     */
     @Parameter(defaultValue = "${project}")
     MavenProject project;
 

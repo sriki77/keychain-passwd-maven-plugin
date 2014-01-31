@@ -1,9 +1,9 @@
 OSX Keychain Password Maven Plugin
 ==============================
 
-I use maven for deployments. This requries me to provide credentials - username and password to maven. You can provide the password when the command is run everytime or store it in maven pom file. Securing password is an issue with all the systems that support only username/password base authentication.
+I use maven for deployments. This requires me to provide credentials - username and password to maven. You can provide the password when the command is run everytime or store it in maven pom file. Securing password is an issue with all the systems that support only username/password base authentication.
 
-Thats the background for creation of this plugin. This plugin retrivies the password from OSX keychain and sets it as a Java System property - which can be used by other plugins. As expected, the plugin is OSX specific.
+Thats the background for creation of this plugin. This plugin retrieves the password from OSX keychain and sets it as a Maven Project property - which can be used by other plugins. As expected, the plugin is OSX specific.
 
 Usage
 ---------
