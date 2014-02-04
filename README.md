@@ -10,7 +10,6 @@ Usage
 * Create a password item in Mac key chain. Screenshot below.
 ![Password Item Image](https://raw.github.com/sriki77/keychain-passwd-maven-plugin/master/passwd_key.png)
 * Configure the maven plugin as follows to access the created keychain it
-
 <pre>
       &lt;plugin&gt;
                 &lt;groupId&gt;org.sriki&lt;/groupId&gt;
@@ -30,8 +29,8 @@ Usage
            &lt;/executions&gt;
    &lt;/plugin&gt;
 </pre> 
-* **itemName** and **accountName** are help identify the password item from keychain
-* **passwordProperty** is the name of the system property to which the retrieved password value should be set. In the above case a Java system property named *password* will set the value retrieved from keychain.
+* **itemName** (default: mvn-app-passwd) and **accountName** (default: mvn-app-passwd) are help identify the password item from keychain
+* **passwordProperty** (default: password)is the name of the system property to which the retrieved password value should be set. In the above case a Java system property named *password* will set the value retrieved from keychain.
 * When the keychain is accessed by maven plugin, OSX will prompt on whether you like the Java program to access keychain; reply *Allow* will cause the password to be retrived successfully.
 * If the password retrieval fails, an error is logged in console indicating the same. The failure to retrive password is not considered fatal and will not halt maven execution. The **passwordProperty** value will be *null*.
 * The plugin by default runs in *validate* phase of the maven build lifecycle.

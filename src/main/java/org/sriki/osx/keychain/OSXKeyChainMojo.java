@@ -20,20 +20,20 @@ public class OSXKeyChainMojo
     /**
      * Item name of the password keychain item.
      */
-    @Parameter(required = true)
+    @Parameter(required = false, defaultValue = "mvn-app-passwd")
     private String itemName;
 
     /**
      * Account name of the password keychain item.
      */
-    @Parameter(required = true)
+    @Parameter(required = false, defaultValue = "mvn-app-passwd" )
     private String accountName;
 
     /**
      * Property name whose value should be the password
      * retrieved from the keychain item.
      */
-    @Parameter(required = true)
+    @Parameter(required = false, defaultValue = "password")
     private String passwordProperty;
 
     /**
