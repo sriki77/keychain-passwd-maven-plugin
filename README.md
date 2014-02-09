@@ -35,7 +35,21 @@ Usage
 * If the password retrieval fails, an error is logged in console indicating the same. The failure to retrive password is not considered fatal and will not halt maven execution. The **passwordProperty** value will be *null*.
 * The plugin by default runs in *validate* phase of the maven build lifecycle.
 
+Location of Maven Plugin
+---------------------------------
+This maven plugin is found in OSS Sonatype repository
+<pre>
+	&lt;repository&gt;
+      &lt;id&gt;Sonatype repository&lt;/id&gt;
+      &lt;name&gt;Sonatype&apos;s Maven repository&lt;/name&gt;
+      &lt;url&gt;http://oss.sonatype.org/content/groups/public&lt;/url&gt;
+      &lt;snapshots&gt;
+        &lt;enabled&gt;false&lt;/enabled&gt;
+      &lt;/snapshots&gt;
+ &lt;/repository&gt;
+</pre>
+
+
 Acknowledgments
 -------------------------
 * This maven plugin uses an excellent [Java based implementation - osx-key-chain-java](https://github.com/conormcd/osx-keychain-java)  by **Conor McDermottroe** to access the OSX keychain. This implementation is core to the plugin. Thanks to him for letting me use the same for the plugin.
-

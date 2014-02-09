@@ -2,13 +2,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.sriki</groupId>
+    <groupId>com.github.sriki77</groupId>
     <artifactId>keychain-passwd-maven-plugin</artifactId>
     <version>1.0</version>
     <packaging>maven-plugin</packaging>
     <name>keychain-passwd-maven-plugin</name>
-    <description>The maven main core project description</description>
-    <url>http://sriki77.blogspot.in</url>
+    <description>This plugin retrieves the password from OSX keychain and sets it as a Maven Project property
+        - which can be used by other plugins.</description>
+    <url>https://github.com/sriki77/keychain-passwd-maven-plugin</url>
     <licenses>
         <license>
             <name>The MIT License (MIT)</name>
@@ -48,6 +49,20 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+
+    <distributionManagement>
+        <repository>
+        <id>sonatype-nexus-staging</id>
+        <name>Nexus Staging Repository</name>
+        <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+        <!--<repository>-->
+            <!--<id>sonatype-nexus-snapshots</id>-->
+            <!--<name>Nexus Snapshots Repository</name>-->
+            <!--<url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
+        <!--</repository>-->
+    </distributionManagement>
 
     <repositories>
         <repository>
@@ -153,6 +168,20 @@
                                 </includes>
                             </artifactSet>
                         </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.4</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
