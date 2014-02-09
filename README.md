@@ -39,7 +39,7 @@ Location of Maven Plugin
 ---------------------------------
 This maven plugin is found in OSS Sonatype repository
 <pre>
-	&lt;repository&gt;
+&lt;repository&gt;
       &lt;id&gt;Sonatype repository&lt;/id&gt;
       &lt;name&gt;Sonatype&apos;s Maven repository&lt;/name&gt;
       &lt;url&gt;http://oss.sonatype.org/content/groups/public&lt;/url&gt;
