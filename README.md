@@ -11,23 +11,23 @@ Usage
 ![Password Item Image](https://raw.github.com/sriki77/keychain-passwd-maven-plugin/master/passwd_key.png)
 * Configure the maven plugin as follows to access the created keychain it
 <pre>
-      &lt;plugin&gt;
-                &lt;groupId&gt;org.sriki&lt;/groupId&gt;
-                &lt;artifactId&gt;keychain-passwd-maven-plugin&lt;/artifactId&gt;
-                &lt;version&gt;1.0&lt;/version&gt;
-                &lt;configuration&gt;
-                    &lt;accountName&gt;maven-test-item&lt;/accountName&gt;
-                    &lt;itemName&gt;maven-test-item&lt;/itemName&gt;
-                    &lt;passwordProperty&gt;password&lt;/passwordProperty&gt;
-                &lt;/configuration&gt;
-             &lt;executions&gt;
-                 &lt;execution&gt;
-                      &lt;goals&gt;
-                            &lt;goal&gt;getpasswd&lt;/goal&gt;
-                     &lt;/goals&gt;
-                &lt;/execution&gt;
-           &lt;/executions&gt;
-   &lt;/plugin&gt;
+&lt;plugin&gt;
+      &lt;groupId&gt;org.sriki&lt;/groupId&gt;
+      &lt;artifactId&gt;keychain-passwd-maven-plugin&lt;/artifactId&gt;
+      &lt;version&gt;1.0&lt;/version&gt;
+      &lt;configuration&gt;
+            &lt;accountName&gt;maven-test-item&lt;/accountName&gt;
+            &lt;itemName&gt;maven-test-item&lt;/itemName&gt;
+            &lt;passwordProperty&gt;password&lt;/passwordProperty&gt;
+      &lt;/configuration&gt;
+      &lt;executions&gt;
+            &lt;execution&gt;
+                  &lt;goals&gt;
+                        &lt;goal&gt;getpasswd&lt;/goal&gt;
+                  &lt;/goals&gt;
+            &lt;/execution&gt;
+      &lt;/executions&gt;
+&lt;/plugin&gt;
 </pre> 
 * **itemName** (default: mvn-app-passwd) and **accountName** (default: mvn-app-passwd) are help identify the password item from keychain
 * **passwordProperty** (default: password)is the name of the system property to which the retrieved password value should be set. In the above case a Java system property named *password* will set the value retrieved from keychain.
@@ -39,14 +39,14 @@ Location of Maven Plugin
 ---------------------------------
 This maven plugin is found in OSS Sonatype repository
 <pre>
-&lt;repository&gt;
-      &lt;id&gt;Sonatype repository&lt;/id&gt;
-      &lt;name&gt;Sonatype&apos;s Maven repository&lt;/name&gt;
-      &lt;url&gt;http://oss.sonatype.org/content/groups/public&lt;/url&gt;
-      &lt;snapshots&gt;
-        &lt;enabled&gt;false&lt;/enabled&gt;
-      &lt;/snapshots&gt;
- &lt;/repository&gt;
+      &lt;repository&gt;
+            &lt;id&gt;Sonatype repository&lt;/id&gt;
+            &lt;name&gt;Sonatype&apos;s Maven repository&lt;/name&gt;
+            &lt;url&gt;http://oss.sonatype.org/content/groups/public&lt;/url&gt;
+            &lt;snapshots&gt;
+                  &lt;enabled&gt;false&lt;/enabled&gt;
+            &lt;/snapshots&gt;
+      &lt;/repository&gt;
 </pre>
 
 
