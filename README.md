@@ -12,7 +12,7 @@ Usage
 * Configure the maven plugin as follows to access the created keychain it
 <pre>
 &lt;plugin&gt;
-      &lt;groupId&gt;org.sriki&lt;/groupId&gt;
+      &lt;groupId&gt;com.github.sriki77&lt;/groupId&gt;
       &lt;artifactId&gt;keychain-passwd-maven-plugin&lt;/artifactId&gt;
       &lt;version&gt;1.0&lt;/version&gt;
       &lt;configuration&gt;
@@ -42,7 +42,7 @@ This maven plugin is found in OSS Sonatype repository
       &lt;repository&gt;
             &lt;id&gt;Sonatype repository&lt;/id&gt;
             &lt;name&gt;Sonatype&apos;s Maven repository&lt;/name&gt;
-            &lt;url&gt;http://oss.sonatype.org/content/groups/public&lt;/url&gt;
+            &lt;url&gt;https://oss.sonatype.org/content/repositories/releases&lt;/url&gt;
             &lt;snapshots&gt;
                   &lt;enabled&gt;false&lt;/enabled&gt;
             &lt;/snapshots&gt;
